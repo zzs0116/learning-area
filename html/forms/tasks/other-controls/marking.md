@@ -1,13 +1,13 @@
 # Other controls marking guide
 
-The aim of the tasks is to demonstrate an understanding of the features covered in the [Other form controls](https://wiki.developer.mozilla.org/en-US/docs/Learn/Forms/Other_form_controls) lesson in Learn Web Development on MDN.
+The aim of the tasks is to demonstrate an understanding of the features covered in the [Other form controls](https://developer.mozilla.org/en-US/docs/Learn/Forms/Other_form_controls) lesson in Learn Web Development on MDN.
 
 ## Task 1
 
 In our first "other controls" assessment, we'll get you to create a multi-line text input.
 
 1. Create a basic multi-line text input. You should use a `<textarea>` element for this.
-2. Associate it semantically with the provided "Comment" label. Use the same value that the `for` attribute already has, for the `id` of the `<textarea>`
+2. Associate it semantically with the provided "Comment" label. Use the same value that the `for` attribute already has, for the `id` of the `<textarea>`.
 3. Give the input 35 columns, and 10 rows of space in which to add comments. The `cols` and `rows` attributes are what you need here.
 4. Give the comments a maximum length of 100 characters. This requires use of the `maxlength` attribute.
 
@@ -40,7 +40,7 @@ The finished markup should look something like this:
 Now it's time to have a go at implementing a drop-down select menu, to allow a user to pick their favourite food from the choices provided.
 
 1. Create your basic select box structure. You should use a `<select>` element for this, inside which you should nest an `<option>` element for each choice.
-2. Associate it semantically with the provided "Comment" label. Use the same value that the `for` attribute already has, for the `id` of the `<textarea>`
+2. Associate it semantically with the provided "Comment" label. Use the same value that the `for` attribute already has, for the `id` of the `<textarea>`.
 3. Inside the list, split the choices up into 2 subgroups — "mains" and "snacks". To do this, you should use `<optgroup>` elements inside the main `<select>`, with appropriate `label` attributes.
 
 The finished markup should look something like this:
