@@ -74,30 +74,21 @@ Finally, you'll need to use a loop to go through the numbers 1 to 500, backwards
 
 You should use a type of loop that you've not used in the previous two tasks.
 
-The code should look like this:
+The code should look something like this:
 
 ```
-let i = 500;
-let para = document.createElement('p');
+while(i >= 2) {
 
-function isPrime(num) {
-  for(let i = 2; i < num; i++) {
-    if(num % i === 0) {
-      return false;
-    }
+
+  if(!isPrime(i)) {
+    i--;
+    continue;
   }
-  
-  return true;
-}
 
-while(i >= 0) {
- i--;
- if(!isPrime(i)) {
-   continue;
- }
- 
- para.textContent += `${i} `;
-}
+  para.textContent += `${i} `;
+  i--;
 
-section.appendChild(para);
+}
 ```
+
+This isn't the most elegant of solutions, but it's arguably reasonable. See [this discussion](https://discourse.mozilla.org/t/loops-3-question-incrementor-up-top/60406) for some ideas on why. 

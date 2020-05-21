@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Form structure: Task 1</title>
+    <title>Basic controls: Task 2</title>
     <link rel="stylesheet" href="../styles.css" />
     <style>
       body {
@@ -35,19 +35,39 @@
     </textarea>
 
     <textarea class="playable playable-html" style="height: 220px;">
-<form>
-  Name:
-  <input type="text" id="name" name="name">
+      <form>
+        <fieldset>
+          <legend>Who is your favorite pony?</legend>
+          <ul>
+            <li>
+              <label for="pinkie">Pinkie Pie</label>
 
-  Age:
-  <input type="number" id="age" name="age">
+            </li>
+            <li>
+              <label for="rainbow">Rainbow Dash</label>
 
-  Comment:
-  <input type="text" id="comment" name="comment">
+            </li>
+            <li>
+              <label for="twilight">Twilight Sparkle</label>
 
-  Email:
-  <input type="email" id="email" name="email">
-</form>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Hotdog preferences</legend>
+          <ul>
+            <li>
+              <label for="vegan">Vegan</label>
+
+            </li>
+            <li>
+              <label for="onions">Onions</label>
+
+            </li>
+          </ul>
+        </fieldset>
+        <button>Submit</button>
+      </form>
     </textarea>
 
     <div class="playable-buttons">
