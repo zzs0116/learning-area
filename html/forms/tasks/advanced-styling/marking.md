@@ -9,7 +9,7 @@ In our first advanced styling tasks, we want you to handle making a search input
 We've already provided you with a basic reset to build upon. 
 
 1. First of all, try giving the search box a consistent width, height, padding, and border color across browsers. This is pretty self-explanatory; `line-height` tends to work better than `height` for keeping a consistent height in which the input text is vertically-centered. 
-2. You'll find that some browsers will not behave in terms of the form element's height. This is due to native OS styling beind used in some cases. How can you remove this native styling? The answer here is `-webkit-appearance: none;`.
+2. You'll find that some browsers will not behave in terms of the form element's height. This is due to native OS styling being used in some cases. How can you remove this native styling? The answer here is `-webkit-appearance: none;`.
 3. Once you've removed the native styling, you'll need to add back one of the features it was providing, to keep same look and feel we originally had. How do you do this? Answer: rounded corners! We need `border-radius`.
 4. One thing that is inconsistent across browsers (particularly looking at Safari here) is the position of the standard blue focus outline. How can you remove this? Answer: `outline: none;`
 5. There is a major problem with just getting rid of the blue focus outline. What is it? Can you add some kind of styling back in so that users can tell when the search box is being hovered or focused? Answer: Use some kind of styling applied to the input using the `:hover` and `:focus` pseudo-classes.
@@ -145,7 +145,7 @@ In our final task for this assessment series, we provide you with a feedback for
 
 What we'd like you to do is make use of some advanced pseudo-classes to provide some useful indicators of validity.
 
-1. First of all, we want you to provide some specific styling to visually indicate which inputs have to be filled in — they cannot be left empty. The basis of doing this is use of the `:required` pseudo-class. Apart form that, you can use whatever styling you like, as long as it reasonably indicates what inputs are reuired. In our case, we've used `:required` plus an adjacent combinator to attach some generated content to the `<span>` that appears after the input, but the provided solution doesn't have to be this complex.
+1. First of all, we want you to provide some specific styling to visually indicate which inputs have to be filled in — they cannot be left empty. The basis of doing this is use of the `:required` pseudo-class. Apart from that, you can use whatever styling you like, as long as it reasonably indicates what inputs are reuired. In our case, we've used `:required` plus an adjacent combinator to attach some generated content to the `<span>` that appears after the input, but the provided solution doesn't have to be this complex.
 2. Second, we want you to provide a useful visual indicator of whether the data entered inside each input is valid or not. This requires use of the `:valid` and `:invalid` pseudo-classes. Again, any reasonable solution is OK here, and attaching something to the trailing `<span>` in each case remains an option.
 
 
