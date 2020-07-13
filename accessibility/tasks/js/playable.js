@@ -6,7 +6,6 @@ var jsCode = textareaJS.value;
 
 function fillCode() {
     editable.textContent = textareaJS.value;
-    section.innerHTML = ' ';
     try {
       eval(editable.textContent);
     } catch(e) {

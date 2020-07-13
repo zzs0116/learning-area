@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Conditionals: Task 1</title>
+    <title>JavaScript accessibility: Task 1</title>
     <style>
       p {
         color: purple;
@@ -12,6 +12,10 @@
       * {
         box-sizing: border-box;
       }
+
+      li {
+        cursor: pointer;
+      }
     </style>
     <link rel="stylesheet" href="../styles.css" />
   </head>
@@ -20,25 +24,43 @@
 
     <section class="preview">
 
+      <div class="animal-list">
+        <h1>Animal summaries</h1>
 
+        <p>The following list of animals can be clicked to display a description of that animal.</p>
+
+        <ul>
+          <li data-description="A type of wild mountain goat, with large recurved horns, found in Eurasia, North Africa, and East Africa.">Ibex</li>
+          <li data-description="A medium-sized manrine mammal, similar to a manatee, but with a Dolphin-like tail.">Dugong</li>
+          <li data-description="A rare marsupial, which looks rather like a tiny kangaroo, measuring around 50 to 75 centimeters.">Quokka</li>
+        </ul>
+      </div>
+
+      <div class="animal-description">
+        <h2></h2>
+
+        <p></p>
+      </div>
 
     </section>
 
   </body>
   <script>
 
-    let season = 'summer';
-    let response;
+    const listItems = document.querySelectorAll('li');
+    const descHeading = document.querySelector('.animal-description h2');
+    const descPara = document.querySelector('.animal-description p');
 
-    // Add your code here
+    listItems.forEach(function(item) {
+      item.addEventListener('mouseup', handleSelection);
+    })
 
-    // Don't edit the code below here!
-
-    const section = document.querySelector('section');
-
-    let para1 = document.createElement('p');
-    para1.textContent = response;
-    section.appendChild(para1);
+    function handleSelection(e) {
+      const heading = e.target.textContent;
+      const description = e.target.getAttribute('data-description');
+      descHeading.textContent = heading;
+      descPara.textContent = description;
+    }
   </script>
 
 </html>

@@ -1,6 +1,6 @@
 # HTML accessibility marking guide
 
-The aim of these tasks is to demonstrate an understanding of the techniques covered in the [HTML: A good basis for accessibility](https://wiki.developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML) lesson in Learn Web Development on MDN.
+The aim of these tasks is to demonstrate an understanding of the techniques covered in the [HTML: A good basis for accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML) lesson in Learn Web Development on MDN.
 
 ## Task 1
 
