@@ -88,7 +88,7 @@ The overall mark awarded is out of 37. Work out their final mark, and then divid
     <ul>
       <li>Add client-side validation to the comment form</li>
       <li>Use media queries to make the site more usable on mobile devices.</li>
-      <li>Use <code>aria-live</code> to inform screenreader users when the area of the comments is updated.</li>
+      <li>Use <code>role="alert"</code> to inform screenreader users when the area of the comments is visible.</li>
     </ul>
   </dd>
 </dl>
