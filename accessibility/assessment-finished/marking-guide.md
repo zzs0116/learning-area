@@ -88,7 +88,7 @@ The overall mark awarded is out of 37. Work out their final mark, and then divid
     <ul>
       <li>Add client-side validation to the comment form</li>
       <li>Use media queries to make the site more usable on mobile devices.</li>
-      <li>Use <code>role="alert"</code> to inform screenreader users when the area of the comments is displayed.</li>
+      <li>Find a way to annouce screenreader users how many comments are displayed then the show comments control button is clicked. For example, put the role attribute with "alert" value on the <code>h2</code> element in the comments section and update its text like so "Comments (1 available)".</li>
     </ul>
   </dd>
 </dl>
