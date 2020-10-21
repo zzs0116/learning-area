@@ -21,11 +21,11 @@
     <script src="es6-promise.js"></script>
     <script src="fetch.js"></script>
     <script>
-      const myImage = document.querySelector('.my-image');
+      var myImage = document.querySelector('.my-image');
 
       fetch('flowers.jpg').then(function(response) {
         response.blob().then(function(myBlob) {
-          let objectURL = URL.createObjectURL(myBlob);
+          var objectURL = URL.createObjectURL(myBlob);
           myImage.src = objectURL;
         });
       });
