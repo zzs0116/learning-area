@@ -175,3 +175,27 @@ section p {
   background: black url(icons/soup.png) no-repeat 2px 2px;
   background-size: 24px 24px;
 }
+
+/* media query for mobile */
+@media (max-width : 43em){
+
+html {
+  font-size: 12px;
+}
+
+body {
+  width: 350px;
+}
+
+header + div {
+  display: flex;
+  flex-direction: column;
+}
+
+}
+
+/* media query for mobile */
+
+@media (max-width : 62em){
+
+}
