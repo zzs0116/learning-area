@@ -196,6 +196,14 @@ header + div {
 
 /* media query for mobile */
 
-@media (max-width : 62em){
+@media (min-width : 44em ) and ( max-width : 62em){
+  body {
+    width: 564px;
+    margin: 10px 10px;
+  }
 
+  h1 {
+    background: url(icons/bean_can.png) no-repeat 7% center, url(icons/bean_can.png) no-repeat 93% center;
+    background-size: 48px 48px;
+  }
 }
