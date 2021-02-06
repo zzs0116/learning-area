@@ -55,7 +55,7 @@ drawCircle(x, y, size);
 
 // Add your code here
 
-window.addEventListener('keypress', (e) => {
+window.addEventListener('keydown', (e) => {
   switch(e.key) {
     case 'a':
       x -= 2;
