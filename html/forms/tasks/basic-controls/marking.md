@@ -68,19 +68,18 @@ The finished markup should look something like this:
     <ul>
       <li>
         <label for="vegan">Vegan</label>
-        <input type="checkbox" id="vegan" name="vegan" value="vegan">
+        <input type="checkbox" id="vegan" name="hotdog" value="vegan">
       </li>
       <li>
         <label for="onions">Onions</label>
-        <input type="checkbox" id="onions" name="onions" value="onions">
+        <input type="checkbox" id="onions" name="hotdog" value="onions">
       </li>
       <li>
         <label for="mustard">Mustard</label>
-        <input type="checkbox" id="mustard" name="mustard" value="mustard">
+        <input type="checkbox" id="mustard" name="hotdog" value="mustard">
       <li>
         <label for="ketchup">Ketchup</label>
-        <input type="checkbox" id="ketchup" name="ketchup" value="ketchup">
-      </li>
+        <input type="checkbox" id="ketchup" name="hotdog" value="ketchup">
       </li>
     </ul>
   </fieldset>
