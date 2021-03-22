@@ -37,7 +37,7 @@ The next task requires you to create working sets of checkboxes and radio button
 
 1. Turn the first fieldset's contents into a set of radio buttons — you should only be able to select one pony character at once. `<input type="radio">` is the key here. You should use the same `name` attribute value for all the inputs, so that it associates the radio buttons into the same group.
 2. Make it so that the first radio button is selected upon page load. This is done by setting the `checked` attribute on the first input.
-3. Turn the second fieldset's content into a set of checkboxes. `<input type="checkbox">` is needed here.
+3. Turn the second fieldset's content into a set of checkboxes. `<input type="checkbox">` is needed here. We've given each input the same `name` attribute value because the items are related.
 4. Add a couple more hotdog choices of your own.
 
 Note: It is usually better if you set `value` attributes explicitly on radio buttons and checkboxes, as well as the usually `type`, `id`, and `name`. If you don't, their value defaults to `on` when submitted, which is often not what you want.

@@ -48,7 +48,7 @@ The finished markup should look something like this:
 
 Next, we want you to implement a slider control to allow the user to choose a maximum number of people to invite to their party.
 
-1. Implement a basic slider control to go along with the provided label. This requires `<input type="slider">`.
+1. Implement a basic slider control to go along with the provided label. This requires `<input type="range">`.
 2. Give it a minimum value of 1, maximum value of 30, and initial value of 10. To do this, you should use the `min`, `max`, and `value` attributes. 
 3. Create a corresponding output element to put the current value of the slider into. Give it a class of `invite-output`, and semantically associate it with the input. If you do this correctly, the JavaScript included on the page will automatically update the output value when the slider is moved. To achieve this, you need to use an `<output>` element, give it a `class` attribute with value `invite-output`, and give it a `for` attribute with value `max-invite`.
 
