@@ -38,7 +38,7 @@
     }
 
     input.onchange = function() {
-      const num = input.value;
+      const num = parseFloat(input.value);
       if(isNaN(num)) {
         para.textContent = 'You need to enter a number!';
       } else {
