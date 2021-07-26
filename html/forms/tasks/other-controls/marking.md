@@ -40,7 +40,7 @@ The finished markup should look something like this:
 Now it's time to have a go at implementing a drop-down select menu, to allow a user to pick their favourite food from the choices provided.
 
 1. Create your basic select box structure. You should use a `<select>` element for this, inside which you should nest an `<option>` element for each choice.
-2. Associate it semantically with the provided "Comment" label. Use the same value that the `for` attribute already has, for the `id` of the `<textarea>`.
+2. Associate it semantically with the provided "Comment" label. Use the same value that the `for` attribute already has, for the `id` of the `<select>`.
 3. Inside the list, split the choices up into 2 subgroups — "mains" and "snacks". To do this, you should use `<optgroup>` elements inside the main `<select>`, with appropriate `label` attributes.
 
 The finished markup should look something like this:
