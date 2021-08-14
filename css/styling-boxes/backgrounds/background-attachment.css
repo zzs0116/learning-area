@@ -37,6 +37,7 @@ article {
   background-image: url(emoji.png);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: top center;
   padding: 1%;
   overflow: auto;
 }
