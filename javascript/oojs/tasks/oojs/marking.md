@@ -27,11 +27,11 @@ Shape.prototype.calcPerimeter = function() {
   console.log(`The ${ this.name }'s perimeter length is ${ this.sides * this.sideLength }.`);
 }
 
-let square = new Shape('square', 4, 5);
+const square = new Shape('square', 4, 5);
 
 square.calcPerimeter();
 
-let triangle = new Shape('triangle', 3, 3);
+const triangle = new Shape('triangle', 3, 3);
 
 triangle.calcPerimeter();
 ```
@@ -57,8 +57,8 @@ class Shape {
   };
 }
 
-let square = new Shape('square', 4, 5);
-let triangle = new Shape('triangle', 3, 3);
+const square = new Shape('square', 4, 5);
+const triangle = new Shape('triangle', 3, 3);
 
 square.calcPerimeter();
 triangle.calcPerimeter();
@@ -97,7 +97,7 @@ class Square extends Shape {
   };
 }
 
-let square = new Square(4);
+const square = new Square(4);
 
 
 square.calcPerimeter();
