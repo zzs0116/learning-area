@@ -88,5 +88,5 @@ birds.splice(eaglesIndex, 1);
 function startsWithE(bird) {
   return bird.startsWith("E");
 }
-const eBirds = birds.filter(startsWithE).sort();
+const eBirds = birds.filter(startsWithE);
 ```
