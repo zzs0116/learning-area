@@ -14,7 +14,7 @@ myName = 'Chris';
 let myAge = 42;
 ```
 
-`let` is ideal for both declarations. `var` is also OK, but `let` is preferred. `const` is not really appropriate, as such values might change, and it won't work in the first instance.
+`let` is ideal for both declarations. `const` is not really appropriate, as such values might change, and it won't work in the first instance.  `var` is not OK.
 
 The `myAge` value will work whether you've initialised it with a numeric (no quotes) or string (quotes) value, however it is a numeric value, so using quotes for it isn't correct.
 

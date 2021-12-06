@@ -86,7 +86,7 @@ ctx.fillRect(10, 10, x, y);
     function drawCanvas() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       eval(textarea.value);
-      para.textContent = 'The rectangle is ' + x + 'px wide and ' + y + 'px high.';
+      para.textContent = `The rectangle is ${x}px wide and ${y}px high.`;
     }
 
     reset.addEventListener('click', function() {

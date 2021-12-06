@@ -15,10 +15,10 @@ Finally, you'll need to concatenate the two strings together, and store the resu
 The answer should look something like this:
 
 ```
-let quoteStart = 'Don\'t judge each day by the harvest you reap ';
-let quoteEnd = 'but by the seeds that you plant.'
+const quoteStart = 'Don\'t judge each day by the harvest you reap ';
+const quoteEnd = 'but by the seeds that you plant.'
 
-let finalQuote = quoteStart + quoteEnd;
+const finalQuote = `${quoteStart}${quoteEnd}`;
 ```
 
 
@@ -31,16 +31,14 @@ Next up, task 2 requires the student to:
 * Use a combination of the variables you have, `.length`, and `.slice()`, to trim down the original quote to 'I do not like green eggs and ham.', and store it in `revisedQuote`.
 
 ```
-let quote = 'I do not like green eggs and ham. I do not like them, Sam-I-Am.';
-let substring = 'green eggs and ham';
+const quote = 'I do not like green eggs and ham. I do not like them, Sam-I-Am.';
+const substring = 'green eggs and ham';
 
-let quoteLength = quote.length;
+const quoteLength = quote.length;
 
-let index = quote.indexOf(substring);
+const index = quote.indexOf(substring);
 
-let revisedQuote = quote.slice(0, index + substring.length + 1);
-
-
+const revisedQuote = quote.slice(0, index + substring.length + 1);
 ```
 
 ## Task 3
@@ -49,21 +47,20 @@ For our next string task, we return to our Green Eggs and Ham revised quote, whi
 
 * Fix the casing. The best way to do this is to put it all in lower case using `.toLowerCase()`, and then put the first letter in uppercase using `replace()`, `slice()`, and `toUpperCase()`. Store the new quote in `fixedQuote`.
 * Replace `green eggs and ham` with whatever food you really don't like using `replace()`.
-* Add a full stop to the end of the sentence using some means (easiest way is to just create a new string with a full stop, and concatenate the two). Store the result in `finalQuote`.
+* Add a full stop to the end of the sentence using some means.
 
 Your code should look something like this:
 
 ```
-let quote = 'I dO nOT lIke gREen eGgS anD HAM';
+const quote = 'I dO nOT lIke gREen eGgS anD HAM';
 
 let fixedQuote = quote.toLowerCase();
-let firstLetter = fixedQuote.slice(0,1);
+const firstLetter = fixedQuote.slice(0,1);
 fixedQuote = fixedQuote.replace(firstLetter, firstLetter.toUpperCase());
 
 fixedQuote = fixedQuote.replace('green eggs and ham', 'pickled onions');
 
-let fullStop = '.';
-let finalQuote = fixedQuote + fullStop;
+const finalQuote = `${fixedQuote}.`;
 ```
 
 ## Task 4
@@ -78,12 +75,12 @@ Our final string task looks at your ability to use template literals. Your answe
 Your code should look something like this:
 
 ```
-let theorem = 'Pythagorean theorem';
+const theorem = 'Pythagorean theorem';
 
-let a = 5;
-let b = 8;
+const a = 5;
+const b = 8;
 
-let myString = `Using ${ theorem }, we can work out that that if the two shortest sides of a right-angled triangle have lengths of ${ a } and ${ b }, the length of the hypotenuse is ${ Math.sqrt((a**2) + (b**2)) }.`;
+const myString = `Using ${ theorem }, we can work out that that if the two shortest sides of a right-angled triangle have lengths of ${ a } and ${ b }, the length of the hypotenuse is ${ Math.sqrt((a**2) + (b**2)) }.`;
 ```
 
 You could use a different form of the fourth placeholder, such as `Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2))` or `${ Math.sqrt((a * a) + (b * b)) }`.
