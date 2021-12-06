@@ -51,7 +51,7 @@
       let resetButton;
 
       function checkGuess() {
-        let userGuess = Number(guessField.value);
+        const userGuess = Number(guessField.value);
         if (guessCount === 1) {
           guesses.textContent = 'Previous guesses: ';
         }
@@ -96,8 +96,8 @@
       function resetGame() {
         guessCount = 1;
         const resetParas = document.querySelectorAll('.resultParas p');
-        for(let i = 0 ; i < resetParas.length ; i++) {
-          resetParas[i].textContent = '';
+        for (const resetPara of resetParas) {
+          resetPara.textContent = '';
         }
 
         resetButton.parentNode.removeChild(resetButton);
