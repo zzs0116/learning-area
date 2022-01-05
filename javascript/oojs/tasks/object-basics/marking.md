@@ -11,20 +11,20 @@ In this task you are provided with an object literal, and your tasks are to
 * Store the value of the `name` property inside `catName`, using bracket notation.
 * Run the `greeting()` method using dot notation (it will log the greeting to the browser DevTools' console).
 * Update the `color` property value to `black`.
-    
+
 The finished code should look something like this:
 
 ```
-let cat = {
+const cat = {
   name : 'Bertie',
   breed : 'Cymric',
   color : 'white',
   greeting: function() {
     console.log('Meow!');
-  } 
+  }
 }
 
-let catName = cat['name'];
+const catName = cat['name'];
 cat.greeting();
 cat.color = 'black';
 ```
@@ -52,7 +52,7 @@ The finished code should look something like this:
 ```
 let bandInfo;
 
-let band = {
+const band = {
   name : 'Black Sabbath',
   nationality : 'British',
   genre : 'heavy metal',
@@ -84,34 +84,55 @@ bandInfo = `The ${ band.nationality } ${ band.genre } band ${ band.name } were a
 
 ## Task 3
 
-Finally in our object basics assessment, we want you to return to the `cat` object literal from Task #1. We want you to rewrite the `greeting()` method so that it logs "Hello, said Bertie the Cymric." to the browser DevTools' console, but in a way that will work across _any_ cat object of the same structure, regardless of its name or breed.
+In this task we want you to return to the `cat` object literal from Task #1. We want you to rewrite the `greeting()` method so that it logs "Hello, said Bertie the Cymric." to the browser DevTools' console, but in a way that will work across _any_ cat object of the same structure, regardless of its name or breed.
 
 When you are done, write your own object called `cat2`, which has the same structure, exactly the same `greeting()` method, but a different `name`, `breed`, and `color`.
 
 Call both `greeting()` methods to check that they log appropriate greetings to the console.
 
-"How would you make the code more DRY?": By creating a `cat` class in which to define the properties and method so they are only defined once, and then creating instances of that class. 
-
 The code should look like this:
 
 ```
-let cat = {
+const cat = {
   name : 'Bertie',
   breed : 'Cymric',
   color : 'white',
   greeting: function() {
     console.log(`Hello, said ${ this.name } the ${ this.breed }.`);
-  } 
+  }
 }
 
-let cat2 = {
+const cat2 = {
   name : 'Elfie',
   breed : 'Aphrodite Giant',
   color : 'ginger',
   greeting: function() {
     console.log(`Hello, said ${ this.name } the ${ this.breed }.`);
-  } 
+  }
 }
+
+cat.greeting();
+cat2.greeting();
+```
+
+## Task 4
+
+In this task we want you to update the code from Task 3 to use a constructor for the cats, so we only have to define `greeting()` once.
+
+The code should look like this:
+
+```
+function Cat(name, breed, color) {
+  this.name = name;
+  this.breed = breed;
+  this.color = color;
+  this.greeting = function() {
+    console.log(`Hello, said ${ this.name } the ${ this.breed }.`);
+  }
+}
+
+const cat = new Cat('Bertie', 'Cymric', 'white');
+const cat2 = new Cat('Elfie', 'Aphrodite Giant', 'ginger');
 
 cat.greeting();
 cat2.greeting();
