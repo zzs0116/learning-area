@@ -23,34 +23,22 @@ Some hints/questions:
 Your code should look something like this:
 
 ```
-let section = document.querySelector('.preview');
-let para1 = document.createElement('p');
-let para2 = document.createElement('p');
-
-let motherInfo = 'The mother cats are called ';
-let kittenInfo;
-
-fetch('sample.json')
-.then(response => response.text())
-.then(text => displayCatInfo(text))
-
 function displayCatInfo(catString) {
   let total = 0;
   let male = 0;
 
   // Add your code here
+  const cats = JSON.parse(catString);
 
-  let cats = JSON.parse(catString);
-
-  for(let i = 0; i < cats.length; i++) {
-    for(let j = 0; j < cats[i].kittens.length; j++) {
+  for (let i = 0; i < cats.length; i++) {
+    for (const kitten of cats[i].kittens) {
       total++;
-      if(cats[i].kittens[j].gender === 'm') {
+      if (kitten.gender === 'm') {
         male++;
       }
     }
 
-    if(i < (cats.length - 1)) {
+    if (i < (cats.length - 1)) {
       motherInfo += `${ cats[i].name }, `;
     } else {
       motherInfo += `and ${ cats[i].name }.`;
@@ -59,7 +47,7 @@ function displayCatInfo(catString) {
 
   kittenInfo  = `There are ${ total } kittens in total, ${ male } males and ${ total - male } females.`;
 
-// Don't edit the code below here!
+  // Don't edit the code below here!
 
   para1.textContent = motherInfo;
   para2.textContent = kittenInfo;
