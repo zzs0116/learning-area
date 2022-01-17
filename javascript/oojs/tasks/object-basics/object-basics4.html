@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>OOJS: Task 3</title>
+    <title>Object basics: Task 4</title>
     <link rel="stylesheet" href="../styles.css" />
     <style>
       * {
@@ -24,7 +24,26 @@
     </section>
 
     <textarea class="playable playable-js" style="height: 220px;">
+const cat = {
+  name : 'Bertie',
+  breed : 'Cymric',
+  color : 'white',
+  greeting: function() {
+    console.log(`Hello, said ${ this.name } the ${ this.breed }.`);
+  }
+}
 
+const cat2 = {
+  name : 'Elfie',
+  breed : 'Aphrodite Giant',
+  color : 'ginger',
+  greeting: function() {
+    console.log(`Hello, said ${ this.name } the ${ this.breed }.`);
+  }
+}
+
+cat.greeting();
+cat2.greeting();
     </textarea>
 
     <div class="playable-buttons">
