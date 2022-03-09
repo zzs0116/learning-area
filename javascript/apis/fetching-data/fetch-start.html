@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Basic XHR example</title>
+    <title>Fetch starting point</title>
 
     <style>
       html, pre {
@@ -42,7 +42,7 @@
   </head>
 
   <body>
-    <h1>Basic XHR example</h1>
+    <h1>Fetch starting point</h1>
 
     <form>
       <label for="verse-choose">Choose a verse</label>
@@ -61,32 +61,6 @@
     </pre>
 
     <script>
-      const verseChoose = document.querySelector('select');
-      const poemDisplay = document.querySelector('pre');
-
-      verseChoose.onchange = function() {
-         const verse = verseChoose.value;
-        updateDisplay(verse);
-      };
-
-      function updateDisplay(verse) {
-        verse = verse.replace(" ", "");
-        verse = verse.toLowerCase();
-        let url = verse + '.txt';
-
-        let request = new XMLHttpRequest();
-        request.open('GET', url);
-        request.responseType = 'text';
-
-        request.onload = function() {
-          poemDisplay.textContent = request.response;
-        };
-
-        request.send();
-      };
-
-      updateDisplay('Verse 1');
-      verseChoose.value = 'Verse 1';
 
     </script>
   </body>
