@@ -9,25 +9,25 @@ document.body.appendChild(renderer.domElement);
 
 let cube;
 
-let loader = new THREE.TextureLoader();
+const loader = new THREE.TextureLoader();
 
-loader.load( 'metal003.png', function (texture) {
+loader.load('metal003.png', texture => {
 	texture.wrapS = THREE.RepeatWrapping;
 	texture.wrapT = THREE.RepeatWrapping;
 	texture.repeat.set(2, 2);
 
-	let geometry = new THREE.BoxGeometry(2.4,2.4,2.4);
-	let material = new THREE.MeshLambertMaterial( { map: texture, shading: THREE.FlatShading } );
+	const geometry = new THREE.BoxGeometry(2.4,2.4,2.4);
+	const material = new THREE.MeshLambertMaterial( { map: texture, shading: THREE.FlatShading } );
 	cube = new THREE.Mesh(geometry, material);
 	scene.add(cube);
 
 	draw();
 });
 
-let light = new THREE.AmbientLight('rgb(255,255,255)'); // soft white light
+const light = new THREE.AmbientLight('rgb(255,255,255)'); // soft white light
 scene.add(light);
 
-let spotLight = new THREE.SpotLight('rgb(255,255,255)');
+const spotLight = new THREE.SpotLight('rgb(255,255,255)');
 spotLight.position.set( 100, 1000, 1000 );
 spotLight.castShadow = true;
 scene.add(spotLight);
