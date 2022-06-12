@@ -61,16 +61,29 @@
         margin: 20px auto;
       }
 
-      input:-moz-read-only, textarea:-moz-read-only,
-      input:read-only, textarea:read-only {
+      input:-moz-read-only,
+      textarea:-moz-read-only {
         border: 0;
         box-shadow: none;
         background-color: white;
       }
 
-      textarea:-moz-read-write,
-      textarea:read-write {
+      input:read-only,
+      textarea:read-only {
+        border: 0;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        background-color: white;
+      }
+
+      textarea:-moz-read-write {
         box-shadow: inset 1px 1px 3px #ccc;
+        border-radius: 5px;
+      }
+
+      textarea:read-write {
+        -webkit-box-shadow: inset 1px 1px 3px #ccc;
+                box-shadow: inset 1px 1px 3px #ccc;
         border-radius: 5px;
       }
     </style>
