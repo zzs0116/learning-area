@@ -30,9 +30,9 @@ The finished code should look like this:
 
 <p>Let's start with a quote:</p>
 
-<blockquote cite="https://developer.mozilla.org/en-US/docs/Learn/Accessibility"><p>By default, <abbr title="Hypertext Markup Language">HTML</abbr> is accessible, if used correctly.</p></blockquote>
+<blockquote cite="https://developer.mozilla.org/en-US/docs/Learn/Accessibility"><p><abbr>HTML</abbr>, Hypertext Markup Language is by default accessible, if used correctly.</p></blockquote>
 
-<p><abbr title="Cascading Style Sheets">CSS</abbr> can also be used to make web pages more, or less, accessible.</p>
+<p><abbr>CSS</abbr>, Cascading Style Sheets, can also be used to make web pages more, or less, accessible.</p>
 
 <p>Chemical Formulae: H<sub>2</sub>O (Water), C<sub>2</sub>H<sub>6</sub>O (Ethanol).</p>
 
