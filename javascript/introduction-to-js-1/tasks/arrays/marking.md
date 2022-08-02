@@ -14,7 +14,7 @@ Last of all, add an item to the start of the array using `.unshift()`.
 
 The answer should look something like this:
 
-```
+```js
 let myArray = ['cats', 'dogs', 'chickens'];
 
 myArray[0] = 'horses';
@@ -22,7 +22,6 @@ myArray[1] = 'pigs';
 
 myArray.unshift('crocodiles');
 ```
-
 
 ## Task 2
 
@@ -36,7 +35,7 @@ Last up, retrieve the last item in the array with `myArray[myArray.length - 1]`;
 
 The example should look something like this:
 
-```
+```js
 let myString = 'Ryu+Ken+Chun-Li+Cammy+Guile+Sakura+Sagat+Juri';
 
 let myArray = myString.split('+');
@@ -56,7 +55,7 @@ For an added challenge, you'll need to use `.forEach()` or some kind of loop (we
 
 Finally you need to stitch the array items together into a string using `myArray.join(' - ')`, and store the result in `myString`.
 
-```
+```js
 let myArray = [ "Ryu", "Ken", "Chun-Li", "Cammy", "Guile", "Sakura", "Sagat", "Juri" ];
 
 myArray.pop();
@@ -70,4 +69,24 @@ myArray.forEach(function(element, index) {
 });
 
 let myString = myArray.join(' - ');
+```
+
+## Task 4
+
+You should start by finding the index of ``"Eagles"``, using `birds.indexOf()`.
+
+Next, use the index with `birds.splice()` to remove the ``"Eagles"`` item.
+
+Finally, you can use `birds.filter()` to get an array containing only birds starting with "E".
+
+The function passed to `filter()` can use `bird.startsWith()` to test whether the bird starts with "E".
+
+```js
+const eaglesIndex = birds.indexOf("Eagles");
+birds.splice(eaglesIndex, 1);
+
+function startsWithE(bird) {
+  return bird.startsWith("E");
+}
+const eBirds = birds.filter(startsWithE);
 ```

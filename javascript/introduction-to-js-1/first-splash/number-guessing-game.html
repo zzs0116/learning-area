@@ -30,7 +30,8 @@
     <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
 
     <div class="form">
-      <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
+      <label for="guessField">Enter a guess: </label>
+      <input type="text" id="guessField" class="guessField">
       <input type="submit" value="Submit guess" class="guessSubmit">
     </div>
 
@@ -51,7 +52,7 @@
       let resetButton;
 
       function checkGuess() {
-        let userGuess = Number(guessField.value);
+        const userGuess = Number(guessField.value);
         if (guessCount === 1) {
           guesses.textContent = 'Previous guesses: ';
         }
@@ -96,8 +97,8 @@
       function resetGame() {
         guessCount = 1;
         const resetParas = document.querySelectorAll('.resultParas p');
-        for(let i = 0 ; i < resetParas.length ; i++) {
-          resetParas[i].textContent = '';
+        for (const resetPara of resetParas) {
+          resetPara.textContent = '';
         }
 
         resetButton.parentNode.removeChild(resetButton);

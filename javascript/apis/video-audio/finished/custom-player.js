@@ -1,14 +1,14 @@
-var media = document.querySelector('video');
-var controls = document.querySelector('.controls');
+const media = document.querySelector('video');
+const controls = document.querySelector('.controls');
 
-var play = document.querySelector('.play');
-var stop = document.querySelector('.stop');
-var rwd = document.querySelector('.rwd');
-var fwd = document.querySelector('.fwd');
+const play = document.querySelector('.play');
+const stop = document.querySelector('.stop');
+const rwd = document.querySelector('.rwd');
+const fwd = document.querySelector('.fwd');
 
-var timerWrapper = document.querySelector('.timer');
-var timer = document.querySelector('.timer span');
-var timerBar = document.querySelector('.timer div');
+const timerWrapper = document.querySelector('.timer');
+const timer = document.querySelector('.timer span');
+const timerBar = document.querySelector('.timer div');
 
 media.removeAttribute('controls');
 controls.style.visibility = 'visible';
@@ -44,8 +44,8 @@ function stopMedia() {
   play.setAttribute('data-icon','P');
 }
 
-var intervalFwd;
-var intervalRwd;
+let intervalFwd;
+let intervalRwd;
 
 function mediaBackward() {
   clearInterval(intervalFwd);
@@ -94,26 +94,15 @@ function windForward() {
 }
 
 function setTime() {
-  var minutes = Math.floor(media.currentTime / 60);
-  var seconds = Math.floor(media.currentTime - minutes * 60);
-  var minuteValue;
-  var secondValue;
+  const minutes = Math.floor(media.currentTime / 60);
+  const seconds = Math.floor(media.currentTime - minutes * 60);
 
-  if (minutes < 10) {
-    minuteValue = '0' + minutes;
-  } else {
-    minuteValue = minutes;
-  }
+  const minuteValue = minutes.toString().padStart(2, '0');
+  const secondValue = seconds.toString().padStart(2, '0');
 
-  if (seconds < 10) {
-    secondValue = '0' + seconds;
-  } else {
-    secondValue = seconds;
-  }
-
-  var mediaTime = minuteValue + ':' + secondValue;
+  const mediaTime = `${minuteValue}:${secondValue}`;
   timer.textContent = mediaTime;
 
-  var barLength = timerWrapper.clientWidth * (media.currentTime/media.duration);
-  timerBar.style.width = barLength + 'px';
+  const barLength = timerWrapper.clientWidth * (media.currentTime/media.duration);
+  timerBar.style.width = `${barLength}px`;
 }

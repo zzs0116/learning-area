@@ -11,13 +11,12 @@ In the first task, you have to create a simple function that prints a random nam
 The finished code should look something like this:
 
 ```
-let names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
-
-let para = document.querySelector('p');
+const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+const para = document.querySelector('p');
 
 function chooseName() {
-  let randomNumber = Math.floor(Math.random() * names.length);
-  let choice = names[randomNumber];
+  const randomNumber = Math.floor(Math.random() * names.length);
+  const choice = names[randomNumber];
   para.textContent = choice;
 }
 
@@ -34,14 +33,14 @@ You'll want to clear the canvas before drawing, so that when the code is updated
 The finished code should look something like this:
 
 ```
-let canvas = document.querySelector('canvas');
-let ctx = canvas.getContext('2d');
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
 
-let x = 50;
-let y = 60;
-let width = 100;
-let height = 75;
-let color = 'blue';
+const x = 50;
+const y = 60;
+const width = 100;
+const height = 75;
+const color = 'blue';
 
 function drawSquare(x, y, width, height, color) {
   ctx.fillStyle = 'white';
@@ -62,19 +61,32 @@ In this task, you return to the problem posed in Task 1, with the aim of improvi
 3. Print this returned result into the paragraph.   
 
 ```
-let names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+const para = document.querySelector('p');
 
-let para = document.querySelector('p');
-
-function random(min,max) {
+function random(min, max) {
   const num = Math.floor(Math.random() * (max - min)) + min;
   return num;
 }
 
 function chooseItem(array) {
-  let choice = array[random(0, array.length)];
+  const choice = array[random(0, array.length)];
   return choice;
 }
 
 para.textContent = chooseItem(names);
+```
+
+## Task 4
+
+In this task, you are asked to change the named `isShort()` function into an arrow function expression.
+
+The finished code should look something like this:
+
+```
+const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+const para = document.createElement('p');
+
+const shortNames = names.filter(name => name.length < 5);
+para.textContent = shortNames;
 ```

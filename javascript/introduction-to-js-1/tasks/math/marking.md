@@ -13,13 +13,13 @@ Finally, you need to write a calculation that checks whether this number is even
 The answer should look something like this:
 
 ```
-let number1 = 4;
-let number2 = 8;
-let number3 = 12;
-let number4 = 8;
+const number1 = 4;
+const number2 = 8;
+const number3 = 12;
+const number4 = 8;
 
-let additionResult = number1 + number2;
-let subtractionResult = number3 - number4;
+const additionResult = number1 + number2;
+const subtractionResult = number3 - number4;
 
 finalResult = additionResult * subtractionResult;
 
@@ -48,9 +48,9 @@ let result2 = 100 / (2 * 6);
 
 result *= result2;
 
-let finalResult = result.toFixed(2);
+const finalResult = result.toFixed(2);
 
-let finalNumber = Number(finalResult)
+const finalNumber = Number(finalResult);
 ```
 
 ## Task 3
@@ -62,9 +62,9 @@ The test results should be stored inside variables called `weightComparison`, `h
 Your code should look something like this:
 
 ```
-let weightComparison = eleWeight < mouseWeight;
+const weightComparison = eleWeight < mouseWeight;
 
-let heightComparison = ostrichHeight > duckHeight;
+const heightComparison = ostrichHeight > duckHeight;
 
-let pwdMatch = pwd1 === pwd2;
+const pwdMatch = pwd1 === pwd2;
 ```
